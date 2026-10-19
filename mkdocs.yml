@@ -1,0 +1,55 @@
+site_name: Binsight
+site_url: https://zdWang04.github.io/pblog/
+theme:
+  language: zh
+  name: material
+
+  # dark/light mode
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 亮色
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 暗色
+  
+  features:
+    # search stuff
+    - search.suggest
+    - search.share
+  
+# plugin stuff
+plugins:
+  - search
+  - blog
+  - tags
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+extra_javascript:
+  - js/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+  # navgation
+nav:
+  - 主页 | Home: index.md
+  - 最近更新 | Recent: blog/index.md
+  - 标签 | Tags: blog/tags.md 
+  - 合辑 | Collections: blog/collections.md
